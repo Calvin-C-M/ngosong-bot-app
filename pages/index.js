@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import MenuCard from '../components/MenuCard'
-import styles from '../styles/Home.module.css'
+// import styles from '../styles/Home.module.css'
 
 import { BiTask } from 'react-icons/bi'
 import { AiOutlineSetting, AiOutlineSchedule } from 'react-icons/ai'
