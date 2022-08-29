@@ -1,18 +1,25 @@
 import Link from "next/link";
 
-const MenuCard = ({ title,link,icon }) => {
+import { AiOutlineArrowRight } from "react-icons/ai"
+
+const MenuCard = ({ title,link,icon,desc }) => {
     return (
-        <Link id={"menu-card-" + title} className="menu-card" href={link}>
-            <a className="flex flex-col bg-blue-800 p-1 border-2 border-black rounded-md shadow-lg">
-                <div className="px-8 py-10">
+        <div id={"menu-card-"+title} class="card w-96 bg-base-100 shadow-xl">
+            <Link href={link} className="">
+                <figure className="p-5">
                     {icon}
+                </figure>
+            </Link>
+            <div class="card-body">
+                <h2 class="card-title">{title}</h2>
+                <p>{desc}</p>
+                <div class="card-actions justify-end">
+                <button class="btn btn-primary btn-circle">
+                    <AiOutlineArrowRight />
+                </button>
                 </div>
-                <hr />
-                <span className="text-lg m-auto border-solid">
-                    {title}
-                </span>
-            </a>
-        </Link>
+            </div>
+        </div>
     );
 }
  
