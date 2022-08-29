@@ -14,9 +14,11 @@ const MenuCard = ({ title,link,icon,desc }) => {
                 <h2 class="card-title">{title}</h2>
                 <p>{desc}</p>
                 <div class="card-actions justify-end">
-                <button class="btn btn-primary btn-circle">
-                    <AiOutlineArrowRight />
-                </button>
+                <Link href={link}>
+                    <button class="btn btn-primary btn-circle">
+                        <AiOutlineArrowRight />
+                    </button>
+                </Link>
                 </div>
             </div>
         </div>
