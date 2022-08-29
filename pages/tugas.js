@@ -5,7 +5,6 @@ import tugasModel from "../models/tugasModel"
 
 import { IoAdd } from "react-icons/io5"
 import { AiOutlineEdit, AiOutlineDelete } from "react-icons/ai"
-import TugasFormModal from "../components/TugasFormModal"
 
 const Tugas = ({ tugas }) => {
     const TANGGAL={
@@ -197,7 +196,7 @@ const Tugas = ({ tugas }) => {
                             <td>{data.kelas}</td>
                             <td>{data.deadline.toString().substring(0,10)}</td>
                             <td className="flex gap-3">
-                                <label for={"add-tugas-"+ data.judul +"-modal"} className="btn btn-success modal-button mb-3">
+                                <label for={"add-tugas-"+ data.judul +"-modal"} className="btn btn-warning modal-button mb-3">
                                     <p className="flex gap-1">
                                         <AiOutlineEdit />
                                     </p>
