@@ -1,0 +1,3 @@
+const CURRENT_SEMESTER=5
+
+export default CURRENT_SEMESTER;
