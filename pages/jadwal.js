@@ -59,19 +59,19 @@ const Jadwal = ({ jadwal }) => {
             <h1 className="text-4xl font-bold mb-3">Jadwal Kelas</h1>
             <div className="mb-3 flex justify-between">
                 <div id="add-jadwal">
-                    <label for="add-jadwal-modal" className="btn btn-success">
+                    <label htmlFor="add-jadwal-modal" className="btn btn-success">
                         <IoAdd />
                         Tambah
                     </label>
                     <input type="checkbox" id="add-jadwal-modal" className="modal-toggle" />
                     <div id="add-jadwal-box" className="modal">
                         <div className="modal-box">
-                            <label for="add-jadwal-modal" className="btn btn-sm btn-circle absolute right-2 top-2">x</label>
+                            <label htmlFor="add-jadwal-modal" className="btn btn-sm btn-circle absolute right-2 top-2">x</label>
                             <h3 className="font-bold text-lg">Tambah Jadwal</h3>
                             <div className="divider"></div>
                             <div>
                                 <div className="mb-3">
-                                    <label for="matkul" className="label">Mata Kuliah</label>
+                                    <label htmlFor="matkul" className="label">Mata Kuliah</label>
                                     <input 
                                         id="matkul"
                                         type="text"
@@ -82,10 +82,10 @@ const Jadwal = ({ jadwal }) => {
                                     />
                                 </div>
                                 <div className="mb-3">
-                                    <label for="hari" className="label">Hari</label>
+                                    <label htmlFor="hari" className="label">Hari</label>
                                     <select className="select select-info" value={hari} onChange={e => setHari(e.target.value)}>
                                         {
-                                            HARI.map(hari => <option value={hari}>
+                                            HARI.map(hari => <option key={hari} value={hari}>
                                                 {hari}
                                             </option>)
                                         }
@@ -93,7 +93,7 @@ const Jadwal = ({ jadwal }) => {
                                 </div>
                                 <div className="mb-3 flex gap-3">
                                     <div>
-                                        <label for="jam-mulai" className="label">Jam Mulai</label>
+                                        <label htmlFor="jam-mulai" className="label">Jam Mulai</label>
                                         <input 
                                             id="jam-mulai"
                                             type="time"
@@ -103,7 +103,7 @@ const Jadwal = ({ jadwal }) => {
                                         />
                                     </div>
                                     <div>
-                                        <label for="jam-keluar" className="label">Jam Keluar</label>
+                                        <label htmlFor="jam-keluar" className="label">Jam Keluar</label>
                                         <input 
                                             id="jam-keluar"
                                             type="time"
@@ -114,10 +114,10 @@ const Jadwal = ({ jadwal }) => {
                                     </div>
                                 </div>
                                 <div className="mb-3">
-                                    <label for="kelas" className="label">Kelas</label>
+                                    <label htmlFor="kelas" className="label">Kelas</label>
                                     <select className="select select-info" value={kelas} onChange={e => setKelas(e.target.value)}>
                                         {
-                                            KELAS.map(kls => <option value={kls}>
+                                            KELAS.map(kls => <option key={kls} value={kls}>
                                                 {kls}
                                             </option>)
                                         }
@@ -131,7 +131,7 @@ const Jadwal = ({ jadwal }) => {
                 <div>
                     <select className="select select-info" value={kelasView} onChange={e => setKelasView(e.target.value)}>
                         {
-                            KELAS.map(kelas => <option value={kelas}>
+                            KELAS.map(kelas => <option key={kelas} value={kelas}>
                                 {kelas}
                             </option>)
                         }

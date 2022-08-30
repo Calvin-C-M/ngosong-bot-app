@@ -101,7 +101,7 @@ const Tugas = ({ tugas }) => {
     return (
         <section id="tugas" className="">
             <h1 className="text-4xl font-bold mb-3">List Tugas</h1>
-            <label for="add-tugas-modal" className="btn btn-success modal-button mb-3">
+            <label htmlFor="add-tugas-modal" className="btn btn-success modal-button mb-3">
                 <p className="flex gap-1">
                     <IoAdd />
                     Tugas
@@ -110,12 +110,12 @@ const Tugas = ({ tugas }) => {
             <input type="checkbox" id="add-tugas-modal" className="modal-toggle" />
             <div id="add-tugas" className="modal">
                 <div className="modal-box">
-                    <label for="add-tugas-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <label htmlFor="add-tugas-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 className="font-bold text-lg">Tambah Tugas</h3>
                     <div className="divider"></div>
                     <div>
                         <div className="mb-3">
-                            <label for="judul" className="label">Judul</label>
+                            <label htmlFor="judul" className="label">Judul</label>
                             <input 
                                 id="judul"
                                 type="text"
@@ -126,7 +126,7 @@ const Tugas = ({ tugas }) => {
                             />
                         </div>
                         <div className="mb-3">
-                            <label for="matkul" className="label">Mata Kuliah</label>
+                            <label htmlFor="matkul" className="label">Mata Kuliah</label>
                             <input 
                                 id="matkul"
                                 type="text"
@@ -137,35 +137,35 @@ const Tugas = ({ tugas }) => {
                             />
                         </div>
                         <div className="mb-3">
-                            <label for="kelas" className="label">Kelas</label>
+                            <label htmlFor="kelas" className="label">Kelas</label>
                             <select className="select select-info" value={kelas} onChange={e => setKelas(e.target.value)}>
                                 {
-                                    KELAS.map(kls => <option value={kls}>
+                                    KELAS.map(kls => <option key={kls} value={kls}>
                                         {kls}
                                     </option>)
                                 }
                             </select>
                         </div>
                         <div className="mb-3">
-                            <label for="deadline" className="label">Deadline</label>
+                            <label htmlFor="deadline" className="label">Deadline</label>
                             <div id="options" className="flex gap-5">
                                 <select className="select select-info" value={tanggal} onChange={e => setTanggal(e.target.value)}>
                                     {
-                                        TANGGAL.array.map(tgl => <option value={tgl}>
+                                        TANGGAL.array.map(tgl => <option key={tgl} value={tgl}>
                                             {tgl}
                                         </option>)
                                     }
                                 </select>
                                 <select className="select select-info" value={bulan} onChange={e => setBulan(e.target.value)}>
                                     {
-                                        BULAN.array.map(bln => <option value={bln}>
+                                        BULAN.array.map(bln => <option key={bln} value={bln}>
                                             {bln}
                                         </option>)
                                     }
                                 </select>
                                 <select className="select select-info" value={tahun} onChange={e => setTahun(e.target.value)}>
                                     {
-                                        TAHUN.array.map(thn => <option value={thn}>
+                                        TAHUN.array.map(thn => <option key={thn} value={thn}>
                                             {thn}
                                         </option>)
                                     }
@@ -196,7 +196,7 @@ const Tugas = ({ tugas }) => {
                             <td>{data.kelas}</td>
                             <td>{data.deadline.toString().substring(0,10)}</td>
                             <td className="flex gap-3">
-                                <label for={"add-tugas-"+ data.judul +"-modal"} className="btn btn-warning modal-button mb-3">
+                                <label htmlFor={"add-tugas-"+ data.judul +"-modal"} className="btn btn-warning modal-button mb-3">
                                     <p className="flex gap-1">
                                         <AiOutlineEdit />
                                     </p>
