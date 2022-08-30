@@ -10,9 +10,9 @@ export default function Home() {
   const iconClass="m-auto text-7xl"
 
   const cardMenu=[
-    { title: "Jadwal", link: "/jadwal", icon: <AiOutlineSchedule className={iconClass} />, desc: "Mau ngeliat jadwal sekarang?" },
-    { title: "Tugas", link: "/tugas", icon: <BiTask className={iconClass} />, desc: "Lupa tugasnya yang mana? Yuk liat sini" },
-    { title: "Settings", link: "/settings", icon: <AiOutlineSetting className={iconClass} />, desc: "Kita setting discord ngosong bot" }
+    { id: 1, title: "Jadwal", link: "/jadwal", icon: <AiOutlineSchedule className={iconClass} />, desc: "Mau ngeliat jadwal sekarang?" },
+    { id: 2, title: "Tugas", link: "/tugas", icon: <BiTask className={iconClass} />, desc: "Lupa tugasnya yang mana? Yuk liat sini" },
+    { id: 3, title: "Settings", link: "/settings", icon: <AiOutlineSetting className={iconClass} />, desc: "Kita setting discord ngosong bot" }
   ]
 
   return (
@@ -21,7 +21,7 @@ export default function Home() {
       <div id="menus" className='flex flex-col gap-3 mt-3'>
         <h2 className='text-3xl font-bold'>Menu List</h2>
         <div id="menulist" className="grid grid-cols-3 gap-4">
-          { cardMenu.map(card => <MenuCard title={card.title} link={card.link} icon={card.icon} desc={card.desc} />) }
+          { cardMenu.map(card => <MenuCard key={card.id} title={card.title} link={card.link} icon={card.icon} desc={card.desc} />) }
         </div>
       </div>
     </div>
